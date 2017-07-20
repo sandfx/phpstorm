@@ -19,12 +19,12 @@
 	$DBname = "tiempos";
 
 	try {
-        $DBcon = new PDO("mysql:host=$DBhost;port=3306;dbname=$DBname",$DBuser,$DBpass);
+        $DBcon = new PDO("mysql:host=$DBhost;dbname=$DBname",$DBuser,$DBpass);
         //$DBcon->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $ex){
         die($ex->getMessage());
     }
-    
+
 $time = new DateTime;
 $tiempo = $time->format(DateTime::ATOM);
 

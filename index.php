@@ -24,6 +24,7 @@
     } catch(PDOException $ex){
         die($ex->getMessage());
     }
+    
 $time = new DateTime;
 $tiempo = $time->format(DateTime::ATOM);
 
